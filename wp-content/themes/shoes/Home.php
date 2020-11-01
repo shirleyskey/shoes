@@ -69,7 +69,7 @@ get_header();
                                 <!-- Ratings & Cart -->
                                 <div class="ratings-cart text-right">
                                     <div class="cart">
-                                        <a href=" http://localhost/shoes/lien-he/" data-toggle="tooltip" data-placement="left" title="Liên Hệ"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/cart.png" alt=""></a>
+                                        <a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="left" title="Liên Hệ"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/cart.png" alt=""></a>
                                     </div>
                                 </div>
                             </div>

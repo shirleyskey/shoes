@@ -12,42 +12,7 @@
 ?>
 
     <!-- ##### Newsletter Area Start ##### -->
-    <section class="newsletter-area section-padding-100-0">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Newsletter Text -->
-                <div class="col-12 col-lg-3 col-xl-4">
-                    <div class="newsletter-text mb-100">
-                        <h2>You are <span>Welcome!</span></h2>
-                        <p>Hãy bán những đôi giày của bạn cho chúng tôi...</p>
-                    </div>
-                </div>
-                <!-- Newsletter Text -->
-                <div class="col-12 col-lg-3 col-xl-2">
-                    <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-ambulance" aria-hidden="true"></i></h2>
-                        <p>Fast Transfer</p>
-                    </div>
-                </div>
-                <!-- Newsletter Text -->
-                <div class="col-12 col-lg-3 col-xl-2">
-                    <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-handshake-o" aria-hidden="true"></i></h2>
-                        <p>Best Offer</p>
-                    </div>
-                </div>
-                <!-- Newsletter Text -->
-                <div class="col-12 col-lg-3 col-xl-4">
-                    <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-tags" aria-hidden="true"></i></h2>
-                        <p>Chúng tôi chỉ mua giày mới, còn nguyên tag.</p>
-                    </div>
-                </div>
-              
-               
-            </div>
-        </div>
-    </section>
+   
     <!-- ##### Newsletter Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
@@ -55,7 +20,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Single Widget Area -->
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-5">
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
@@ -63,27 +28,20 @@
                         </div>
                         <!-- Copywrite Text -->
                         <p class="copywrite">
-                            Shoes that are lighter than air</p>
+                        Trở thành 1 phần trong seller list của KicksHunter</p>
+                        <p>Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
 
                     </div>
                 </div>
                 <!-- Single Widget Area -->
-                <div class="col-12 col-lg-8">
-                    <div class="single_widget_area">
-                        <!-- Footer Menu -->
-                        <div class="footer_menu">
-                            <nav class="navbar navbar-expand-lg justify-content-end">
-                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#footerNavContent" aria-controls="footerNavContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
-                                <div class="collapse navbar-collapse" id="footerNavContent">
-                                    <ul class="navbar-nav ml-auto">
-                                        <li class="nav-item active">
-                                            <a class="nav-link" href="buy-list.html">Buy List</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
+                <div class="col-12 col-lg-2">
+                </div>
+                <div class="col-12 col-lg-5">
+                    
+                    <?php  
+                    echo do_shortcode( '[mc4wp_form id="52"]' );
+                    ?>
+                
                 </div>
             </div>
         </div>
