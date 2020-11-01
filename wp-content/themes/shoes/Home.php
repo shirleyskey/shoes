@@ -34,16 +34,19 @@ get_header();
                 <div class="row grid">
 					<!-- Single Product Area -->
 					<?php 
-                $loop = new WP_Query( array( 'post_type' => 'giay', 'posts_per_page' => 8 , 'paged' => get_query_var('page') ) ); 
+                $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 8 , 'paged' => get_query_var('page') ) ); 
                 while ( $loop->have_posts() ) : $loop->the_post();
                 ?>
                     <?php 
                       $anh01 = get_field('anh_01');
                       $anh02 = get_field('anh_02');
 					  $size = get_field('size');
-					  $cate = get_field('category');
+                      $cate = get_field('category');
+                      $post_id = get_the_ID(); // or use the post id if you already have it
+                      $category_object = get_the_category($post_id);
+                      $category_name = $category_object[0]->slug;
                 	?>
-					<div class="col-12 col-sm-6 col-md-4 col-xl-3 element-item <?php echo $cate; ?>">
+					<div class="col-6 col-sm-6 col-md-4 col-xl-3 element-item <?php echo $category_name; ?>">
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
                             <div class="product-img">
@@ -62,7 +65,7 @@ get_header();
                                 <div class="product-meta-data">
                                     <div class="line"></div>
                                     <p class="product-price">Size: <span style="color: #000000; font-size: 20px"><?php echo $size; ?></span></p>
-                                    <a href=" http://localhost/shoes/lien-he/">
+                                    <a href="<?php echo the_permalink();?>">
                                         <h6><?php the_title(); ?></h6>
                                     </a>
                                 </div>

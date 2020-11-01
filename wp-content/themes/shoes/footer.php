@@ -24,12 +24,12 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo2.png" alt=""></a>
+                            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo2.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
-                        <p class="copywrite">
+                        <p class="copywrite-1">
                         Trở thành 1 phần trong seller list của KicksHunter</p>
-                        <p>Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
+                        <p class="copywrite-2">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
 
                     </div>
                 </div>

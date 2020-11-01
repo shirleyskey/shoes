@@ -1054,3 +1054,91 @@ textarea {
     margin-bottom: 30px;
     color: #242424;
 }
+body.body-lienhe{background-size: cover;background-position: center;width: 100%;height: 100%;position: relative;}
+/* Slogan Footer  */
+.copywrite-1{font-size: 20px;margin-bottom: 0px;}
+.copywrite-2{font-size: 15px;}
+.footer-lienhe .copywrite-1{color: #000000;}
+.footer-lienhe .copywrite-2{
+
+}
+/* Mail Chimp Subscribe Form  */
+.mc4wp-form-fields{
+
+}
+.mc4wp-form-fields label{
+	color: #000000;
+}
+.mc4wp-form-fields input{
+	border: transparent!important;
+	border-radius: 0px!important;
+	padding: 12px 17px;
+}
+.mc4wp-form-fields input:focus{
+	outline: none;
+	border: transparent;
+}
+.mc4wp-response{
+
+}
+.mc4wp-form-fields input[type=submit]{
+	color: #000000!important;background-color: #fab832!important;border: transparent!important;
+}
+
+/* Feature 4 Column  */
+.features h2{
+	position: relative;
+
+}
+.features h2 i{font-size: 40px; position: relative;}
+.features p::after{
+	position: absolute;
+	width: 77%;
+	height: 3px;
+	background-color: #fab832;
+	content: "";
+	left: 0px;
+	top: 0px;
+}
+.features p{color: #000000;font-weight: 500;letter-spacing: 0.1px;font-size: 20px;position: relative;padding-top: 7px;}
+/* WP Forms Custom  */
+.wpforms-title{text-align: center!important;text-transform: uppercase!important;color: #000000!important;font-weight: 500!important;font-size: 33px!important;}
+.wpforms-page-next{color: #000000!important;background-color: #fab832!important;border: transparent!important;}
+.wpforms-page-prev{
+
+}
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #e5e5e5eb;
+	opacity: 0.5;
+}
+
+.wpforms-validate{background-color: #ffffff!important;padding: 25px 37px!important;}
+.wpforms-validate label{
+	color: #000000;
+}
+.wpforms-validate input{
+	
+}
+@media (min-width: 375px) {  
+	.wpforms-title {
+		font-size: 28px!important;
+	}
+}
+@media (min-width: 576px) {  
+	.wpforms-title {
+		font-size: 28px!important;
+	}
+}
+@media (min-width: 768px) {  
+ 
+}
+@media (min-width: 992px) { 
+ 
+}
+@media (min-width: 1200px) {  
+    
+}

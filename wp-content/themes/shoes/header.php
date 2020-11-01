@@ -40,14 +40,7 @@
         </div>
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <div class="search-content">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""></button>
-                        </form>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
@@ -60,7 +53,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="amado-navbar-brand">
-                <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
@@ -76,27 +69,36 @@
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <div id="filters" class="button-group"> 
-						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active ">SHOW ALL</button>
-						<button data-filter='.jordan' class="btn-block border-0 pb-3 ">Jordan</button>
-						<button data-filter='.yeezy' class="btn-block border-0 pb-3 ">Yeezy</button>
-						<button data-filter='.offwhite' class="btn-block border-0 pb-3 mb-4">Off White</button>
+                        <button data-filter='*' class="btn-block border-0 pt-3 pb-3 active ">SHOW ALL</button>
+                        <?php
+                            $categories = get_categories( array() );
+
+                            foreach( $categories as $category ) {
+                                ?>
+                                <button data-filter='.<?php echo $category->slug?>' class="btn-block border-0 pb-3 "><?php echo $category->name ?></button>
+                        <?php       
+                            } 
+                        ?>
+                        
+
+						
+						
                 </div>
             </nav>
             <!-- Cart Menu -->
-            <div class="cart-fav-search mb-100">
-                <a href="#" class="search-nav"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""> Search</a>
-            </div>
+           
+            
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
             </div>
         </header>
         <!-- Header Area End -->

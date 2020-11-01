@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
 	<!-- Favicon  -->
-	<link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/favicon.ico">
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/favicon.png">
 
 	<!-- Core Style CSS -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/resources/css/core-style.css">
@@ -31,25 +31,12 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body class="body-lienhe" <?php body_class(); ?> style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/bg-contact.png)">
+<div class="overlay"></div>
 <?php wp_body_open(); ?>
  <!-- Search Wrapper Area Start -->
  <div class="search-wrapper section-padding-100">
-        <div class="search-close">
-            <i class="fa fa-close" aria-hidden="true"></i>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="search-content">
-                        <form action="#" method="get">
-                            <input type="search" name="search" id="search" placeholder="Type your keyword...">
-                            <button type="submit"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""></button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
     </div>
     <!-- Search Wrapper Area End -->
 
@@ -60,7 +47,7 @@
         <div class="mobile-nav">
             <!-- Navbar Brand -->
             <div class="amado-navbar-brand">
-                <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Navbar Toggler -->
             <div class="amado-navbar-toggler">
@@ -69,19 +56,19 @@
         </div>
 
         <!-- Header Area Start -->
-        <header class="header-area clearfix">
+        <header class="header-area clearfix" style="background-color: transparent!important">
             <!-- Close Icon -->
             <div class="nav-close">
                 <i class="fa fa-close" aria-hidden="true"></i>
             </div>
             <!-- Logo -->
             <div class="logo">
-                <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
+                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
                 <div id="filters" class="button-group"> 
-						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active "><a href="http://localhost/shoes">BUY LIST</a> </button>
+						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active "><a href="http://localhost/shoes">Back To Buy List</a> </button>
 						
                 </div>
             </nav>
@@ -91,47 +78,52 @@
             </div> -->
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
             </div>
         </header>
         <!-- Header Area End -->
 
-        <div class="cart-table-area section-padding-100">
+        <div class="cart-table-area section-padding-100 features">
             <div class="container-fluid">
                 <div class="row">
-                <div class="col-12 col-lg-3 col-xl-2">
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-ambulance" aria-hidden="true"></i></h2>
+                        <h2><i class="fa fa-ambulance" aria-hidden="true" style="color: #a20a0a"></i></h2>
                         <p>free shipping</p>
                     </div>
                 </div>
                 <!-- Newsletter Text -->
-                <div class="col-12 col-lg-3 col-xl-2">
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-handshake-o" aria-hidden="true"></i></h2>
+                        <h2><i class="fa fa-handshake-o" aria-hidden="true" style="color: #ffa36c"></i></h2>
                         <p>fast transaction</p>
                     </div>
                 </div>
                 <!-- Newsletter Text -->
                
-                <div class="col-12 col-lg-3 col-xl-2">
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-shopping-bag" aria-hidden="true"></i></h2>
+                        <h2><i class="fa fa-shopping-bag" aria-hidden="true" style="color: #799351"></i></h2>
                         <p>best offer</p>
                     </div>
                 </div>
-                <div class="col-12 col-lg-3 col-xl-2">
+                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-tags" aria-hidden="true"></i></h2>
+                        <h2><i class="fa fa-tags" aria-hidden="true" style="color: #e79e4f"></i></h2>
                         <p>Chúng tôi chỉ mua giày mới, còn nguyên tag.</p>
                     </div>
                 </div>
                 </div>
-                <div class="row">
-                    <div class="col-12 col-lg-8">
+
+                
+
+            </div>
+            <div class="container">
+            <div class="row">
+                    <div class="col-12 col-lg-10 col-md-10 col-xl-10 col-xs-12">
                         <div class="checkout_details_area mt-50 clearfix">
 
                             <div class="cart-title">
@@ -148,7 +140,7 @@
     <!-- ##### Main Content Wrapper End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
+    <footer class="footer_area clearfix footer-lienhe" style="background-color: transparent!important">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Single Widget Area -->
@@ -156,12 +148,12 @@
                     <div class="single_widget_area">
                         <!-- Logo -->
                         <div class="footer-logo mr-50">
-                            <a href="index.html"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo2.png" alt=""></a>
+                            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
                         </div>
                         <!-- Copywrite Text -->
-                        <p class="copywrite">
+                        <p class="copywrite-1">
                         Trở thành 1 phần trong seller list của KicksHunter</p>
-                        <p>Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
+                        <p class="copywrite-2">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
 
                     </div>
                 </div>
