@@ -35,15 +35,24 @@
 <?php wp_body_open(); ?>
  <!-- Search Wrapper Area Start -->
  <div class="search-wrapper section-padding-100">
-        <div class="search-close">
-            <i class="fa fa-close" aria-hidden="true"></i>
-        </div>
-        <div class="container">
-            <div class="row">
-               
+    <div class="search-close">
+        <i class="fa fa-close" aria-hidden="true"></i>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="search-content">
+                    <form action="<?php echo get_home_url(); ?>/" method="get">
+                        <input type="search" name="s" id="s" placeholder="Type your keyword..." onblur="if(this.value=='')this.value='type your search'"
+    onfocus="if(this.value=='type your search')this.value=''">
+                        <button type="submit"><img src="img/core-img/search.png" alt=""></button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
+    </div>
+
     <!-- Search Wrapper Area End -->
 
     <!-- ##### Main Content Wrapper Start ##### -->
@@ -91,7 +100,10 @@
                 </div>
             </nav>
             <!-- Cart Menu -->
-           
+           <!-- Cart Menu -->
+           <div class="cart-fav-search mb-100">
+                <a href="#" class="search-nav"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""> Search</a>
+            </div>
             
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">

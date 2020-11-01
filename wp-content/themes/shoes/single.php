@@ -57,32 +57,14 @@
 
         <!-- Header Area Start -->
         <header class="header-area clearfix" style="background-color: transparent!important">
-            <!-- Close Icon -->
-            <div class="nav-close">
-                <i class="fa fa-close" aria-hidden="true"></i>
-            </div>
-            <!-- Logo -->
-            <div class="logo">
-                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
-            </div>
-            <!-- Amado Nav -->
+           
             <nav class="amado-nav">
                 <div id="filters" class="button-group"> 
 						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active "><a href="http://localhost/shoes">Back To Buy List</a> </button>
 						
                 </div>
             </nav>
-            <!-- Cart Menu -->
-            <!-- <div class="cart-fav-search mb-100">
-                <a href="#" class="search-nav"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""> Search</a>
-            </div> -->
-            <!-- Social Button -->
-            <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
-            </div>
+           
         </header>
         <!-- Header Area End -->
 
@@ -145,27 +127,12 @@
             <div class="row align-items-center">
                 <!-- Single Widget Area -->
                 <div class="col-12 col-lg-5">
-                    <div class="single_widget_area">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
-                        </div>
-                        <!-- Copywrite Text -->
-                        <p class="copywrite-1">
-                        Trở thành 1 phần trong seller list của KicksHunter</p>
-                        <p class="copywrite-2">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
-
-                    </div>
+                   
                 </div>
                 <!-- Single Widget Area -->
                 <div class="col-12 col-lg-2">
                 </div>
                 <div class="col-12 col-lg-5">
-                    
-                    <?php  
-                    echo do_shortcode( '[mc4wp_form id="52"]' );
-                    ?>
-                
                 </div>
             </div>
         </div>

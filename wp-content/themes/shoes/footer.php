@@ -20,28 +20,25 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Single Widget Area -->
-                <div class="col-12 col-lg-5">
+                <div class="col-12 col-lg-12">
                     <div class="single_widget_area">
-                        <!-- Logo -->
-                        <div class="footer-logo mr-50">
-                            <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo2.png" alt=""></a>
-                        </div>
-                        <!-- Copywrite Text -->
-                        <p class="copywrite-1">
+                        <p class="copywrite-1 text-center">
                         Trở thành 1 phần trong seller list của KicksHunter</p>
-                        <p class="copywrite-2">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
+                        <p class="copywrite-2 text-center">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
 
                     </div>
                 </div>
-                <!-- Single Widget Area -->
-                <div class="col-12 col-lg-2">
+               
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-3 col-md-3 col-xl-3">
                 </div>
-                <div class="col-12 col-lg-5">
-                    
+                <div class="col-12 col-lg-6 col-md-6 col-xl-6">
                     <?php  
                     echo do_shortcode( '[mc4wp_form id="52"]' );
                     ?>
-                
+                </div>
+                <div class="col-12 col-lg-3 col-md-3 col-xl-3">
                 </div>
             </div>
         </div>

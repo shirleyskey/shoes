@@ -1,53 +1,75 @@
-<?php
-/**
- * The template for displaying search results pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
- *
- * @package shoes
- */
-
+<?php 
 get_header();
 ?>
+ <div class="products-catagories-area clearfix section-padding-100">
+    <div class="container-fluid">
+    <div class="row">
+        <?php  _e("<h2 style='color:#000'>Kết quả tìm kiếm cho: ".get_query_var('s')."</h2>"); ?>
+    </div>
+    <div class="row">
+            <?php
+            $s=get_search_query();
+            $args = array(
+                            's' =>$s
+                        );
+                // The Query
+            $the_query = new WP_Query( $args );
+            if ( $the_query->have_posts() ) {
+                
+                    while ( $the_query->have_posts() ) {
+                    $the_query->the_post();
+                            ?>
+                                <?php 
+                                $anh01 = get_field('anh_01');
+                                $anh02 = get_field('anh_02');
+                                $size = get_field('size');
+                                $cate = get_field('category');
+                                $post_id = get_the_ID(); // or use the post id if you already have it
+                                $category_object = get_the_category($post_id);
+                                $category_name = $category_object[0]->slug;
+                                ?>
+                                <div class="col-4 col-sm-4 col-md-4 col-xl-3 element-item <?php echo $category_name; ?>">
+                                    <div class="single-product-wrapper">
+                                        <!-- Product Image -->
+                                        <div class="product-img">
+                                        <?php if( !empty( $anh01 ) ): ?>
+                                            <img src="<?php echo esc_url($anh01['url']); ?>" alt="">
+                                        <?php endif; ?>
+                                            <!-- Hover Thumb -->
+                                        <?php if( !empty( $anh02 ) ): ?>
+                                            <img class="hover-img" src="<?php echo esc_url($anh02['url']); ?>" alt="">
+                                        <?php endif; ?>
+                                        </div>
 
-	<main id="primary" class="site-main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'shoes' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-	</main><!-- #main -->
-
+                                        <!-- Product Description -->
+                                        <div class="product-description d-flex align-items-center justify-content-between">
+                                            <!-- Product Meta Data -->
+                                            <div class="product-meta-data">
+                                                <div class="line"></div>
+                                                <p class="product-price">Size: <span style="color: #000000; font-size: 20px"><?php echo $size; ?></span></p>
+                                                <a href="<?php echo the_permalink();?>">
+                                                    <h6><?php the_title(); ?></h6>
+                                                </a>
+                                            </div>
+                                            <!-- Ratings & Cart -->
+                                            <div class="ratings-cart text-right">
+                                                <div class="cart">
+                                                    <a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="left" title="Liên Hệ"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/cart.png" alt=""></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            <?php
+                            }
+                        }else{
+                    ?>
+                    <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+</div>
 <?php
-get_sidebar();
 get_footer();

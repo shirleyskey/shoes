@@ -57,32 +57,13 @@
 
         <!-- Header Area Start -->
         <header class="header-area clearfix" style="background-color: transparent!important">
-            <!-- Close Icon -->
-            <div class="nav-close">
-                <i class="fa fa-close" aria-hidden="true"></i>
-            </div>
-            <!-- Logo -->
-            <div class="logo">
-                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
-            </div>
-            <!-- Amado Nav -->
+           
             <nav class="amado-nav">
                 <div id="filters" class="button-group"> 
 						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active "><a href="http://localhost/shoes">Back To Buy List</a> </button>
 						
                 </div>
             </nav>
-            <!-- Cart Menu -->
-            <!-- <div class="cart-fav-search mb-100">
-                <a href="#" class="search-nav"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/search.png" alt=""> Search</a>
-            </div> -->
-            <!-- Social Button -->
-            <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
-            </div>
         </header>
         <!-- Header Area End -->
 

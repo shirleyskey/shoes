@@ -1123,9 +1123,18 @@ body.body-lienhe{background-size: cover;background-position: center;width: 100%;
 .wpforms-validate input{
 	
 }
-@media (min-width: 375px) {  
+@media (min-width: 340px) {  
+	
+}
+@media (max-width: 575px){
 	.wpforms-title {
 		font-size: 28px!important;
+	}
+	.form-mailchimp input[type="email"]{
+		width: 100%!important;	
+	}
+	.form-mailchimp input[type="submit"]{
+		margin-top: 10px;	
 	}
 }
 @media (min-width: 576px) {  
@@ -1134,11 +1143,14 @@ body.body-lienhe{background-size: cover;background-position: center;width: 100%;
 	}
 }
 @media (min-width: 768px) {  
- 
+	
 }
 @media (min-width: 992px) { 
  
 }
 @media (min-width: 1200px) {  
     
+}
+.form-mailchimp input[type="submit"]{
+	padding: 16px 15px;	
 }

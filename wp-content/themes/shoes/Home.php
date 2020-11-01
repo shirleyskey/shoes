@@ -34,7 +34,7 @@ get_header();
                 <div class="row grid">
 					<!-- Single Product Area -->
 					<?php 
-                $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 8 , 'paged' => get_query_var('page') ) ); 
+                $loop = new WP_Query( array( 'post_type' => 'post', 'paged' => get_query_var('page') ) ); 
                 while ( $loop->have_posts() ) : $loop->the_post();
                 ?>
                     <?php 
@@ -46,7 +46,7 @@ get_header();
                       $category_object = get_the_category($post_id);
                       $category_name = $category_object[0]->slug;
                 	?>
-					<div class="col-6 col-sm-6 col-md-4 col-xl-3 element-item <?php echo $category_name; ?>">
+					<div class="col-4 col-sm-4 col-md-4 col-xl-3 element-item <?php echo $category_name; ?>">
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
                             <div class="product-img">
@@ -81,15 +81,7 @@ get_header();
                 <?php 
                   endwhile; ?>
                 </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Pagination -->
-                        <nav aria-label="navigation" class="paginate">
-                            <?php if(function_exists('wp_pagenavi')) { wp_pagenavi(array('query'=> $loop));} ?>
-                        </nav>
-                    </div>
-                </div>
+                
                 <?php  wp_reset_postdata(); ?>
             
             </div>
