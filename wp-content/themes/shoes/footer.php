@@ -16,15 +16,17 @@
     <!-- ##### Newsletter Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-    <footer class="footer_area clearfix">
+    <footer class="footer_area clearfix" style="background-color: <?php echo get_theme_mod( 'color_header' ); ?>!important">
         <div class="container">
             <div class="row align-items-center">
                 <!-- Single Widget Area -->
                 <div class="col-12 col-lg-12">
                     <div class="single_widget_area">
                         <p class="copywrite-1 text-center">
-                        Trở thành 1 phần trong seller list của KicksHunter</p>
-                        <p class="copywrite-2 text-center">Chúng tôi sẽ cập nhật cho bạn về tất cả những đôi giày mà chúng tôi đang tìm kiếm hàng tuần</p>
+                        <?php echo get_theme_mod( 'desciption01' ); ?></p>
+                        <p class="copywrite-2 text-center">
+                        <?php echo get_theme_mod( 'desciption02' ); ?>
+                        </p>
 
                     </div>
                 </div>

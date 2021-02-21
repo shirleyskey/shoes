@@ -21,3 +21,7 @@
 [2020-11-01 09:12:04] WARNING: Form 52 > buiv***************@gm***.com is already subscribed to the selected list(s)
 [2020-11-01 09:13:37] WARNING: Form 52 > shis**********@gm***.com is already subscribed to the selected list(s)
 [2020-11-01 09:18:25] WARNING: Form 52 > buiv***************@gm***.com is already subscribed to the selected list(s)
+[2020-11-05 16:01:05] WARNING: WPForms > shis**********@gm***.com is already subscribed to the selected list(s)
+[2020-11-05 16:01:26] WARNING: Form 52 > buiv***************@gm***.com is already subscribed to the selected list(s)
+[2020-11-05 16:02:59] WARNING: Form 52 > buiv***************@gm***.com is already subscribed to the selected list(s)
+[2020-11-05 16:03:41] WARNING: Form 52 > buiv***************@gm***.com is already subscribed to the selected list(s)

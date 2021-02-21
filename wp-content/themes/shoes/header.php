@@ -77,8 +77,9 @@
                 <i class="fa fa-close" aria-hidden="true"></i>
             </div>
             <!-- Logo -->
+           
             <div class="logo">
-                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
+                
             </div>
             <!-- Amado Nav -->
             <nav class="amado-nav">
@@ -107,10 +108,19 @@
             
             <!-- Social Button -->
             <div class="social-info d-flex justify-content-between">
-                <a href="#"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
-                <a href="#"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="<?php echo get_theme_mod( 'pinterest' ); ?>"><i class="fa fa-pinterest" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="<?php echo get_theme_mod( 'instagram' ); ?>"><i class="fa fa-instagram" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="<<?php echo get_theme_mod( 'facebook' ); ?>"><i class="fa fa-facebook" aria-hidden="true" style="color: #000000!important;"></i></a>
+                <a href="<?php echo get_theme_mod( 'twitter' ); ?>"><i class="fa fa-twitter" aria-hidden="true" style="color: #000000!important;"></i></a>
             </div>
         </header>
+        <div class="top-header" style="background-color: <?php echo get_theme_mod( 'color_header' ); ?>!important">
+            <div class="logo">
+                <a href="<?php echo get_home_url(); ?>">
+                <img src="<?php echo ( get_theme_mod( 'logo' ) ); ?>" alt="">
+                </a>
+            </div>
+            <h1 class="text-center"><?php echo get_theme_mod( 'title' ); ?></h1>
+        </div>
+       
         <!-- Header Area End -->

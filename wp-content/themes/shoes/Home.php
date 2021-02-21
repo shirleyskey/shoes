@@ -23,6 +23,7 @@ get_header();
         <div class="products-catagories-area clearfix section-padding-100">
             <div class="container-fluid">
                 <div class="row">
+                
                     <div class="col-12">
                         <div class="product-topbar d-xl-flex align-items-end justify-content-around">
                             <div class="product-sorting d-flex">
@@ -50,30 +51,32 @@ get_header();
                         <div class="single-product-wrapper">
                             <!-- Product Image -->
                             <div class="product-img">
-							<?php if( !empty( $anh01 ) ): ?>
-								<img src="<?php echo esc_url($anh01['url']); ?>" alt="">
-							<?php endif; ?>
-								<!-- Hover Thumb -->
-							<?php if( !empty( $anh02 ) ): ?>
-								<img class="hover-img" src="<?php echo esc_url($anh02['url']); ?>" alt="">
-							<?php endif; ?>
+                                <a href="<?php echo the_permalink();?>" class="link-product">
+                                    <?php if( !empty( $anh01 ) ): ?>
+                                        <img src="<?php echo esc_url($anh01['url']); ?>" alt="">
+                                    <?php endif; ?>
+                                        <!-- Hover Thumb -->
+                                    <?php if( !empty( $anh02 ) ): ?>
+                                        <img class="hover-img" src="<?php echo esc_url($anh02['url']); ?>" alt="">
+                                    <?php endif; ?>
+                                </a>
                             </div>
 
                             <!-- Product Description -->
                             <div class="product-description d-flex align-items-center justify-content-between">
                                 <!-- Product Meta Data -->
                                 <div class="product-meta-data">
-                                    <div class="line"></div>
-                                    <p class="product-price">Size: <span style="color: #000000; font-size: 20px"><?php echo $size; ?></span></p>
+                                    <div class="line" style="color: <?php echo get_theme_mod( 'color_line' ); ?>!important"></div>
+                                    <p class="product-price" style="color: <?php echo get_theme_mod( 'color_size' ); ?>!important">Size: <span style="color: #000000; font-size: 20px"><?php echo $size; ?></span></p>
                                     <a href="<?php echo the_permalink();?>">
-                                        <h6><?php the_title(); ?></h6>
+                                        <h6 style="color: <?php echo get_theme_mod( 'color_name_item' ); ?>!important"><?php the_title(); ?></h6>
                                     </a>
                                 </div>
                                 <!-- Ratings & Cart -->
                                 <div class="ratings-cart text-right">
-                                    <div class="cart">
+                                    <!-- <div class="cart">
                                         <a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="left" title="Liên Hệ"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/cart.png" alt=""></a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

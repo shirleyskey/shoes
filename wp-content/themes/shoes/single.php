@@ -26,86 +26,83 @@
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/favicon.png">
 
 	<!-- Core Style CSS -->
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/resources/css/animate.css">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/resources/css/core-style.css">
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri();?>/resources/style.css">
-	<?php wp_head(); ?>
+    <!-- <script src="<?php echo get_stylesheet_directory_uri();?>/resources/js/jquery/jquery-2.2.4.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <?php wp_head(); ?>
+    
+   
 </head>
+<?php 
+$image = get_field('background');
+$cot01 = get_field('cot01');
+$cot02 = get_field('cot02');
+$cot03 = get_field('cot03');
+$cot04 = get_field('cot04');
 
-<body class="body-lienhe" <?php body_class(); ?> style="background-image: url(<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/bg-contact.png)">
+?>
+<body class="body-lienhe" <?php body_class(); ?> style="background-image: url(<?php echo get_theme_mod( 'background' ); ?>)">
 <div class="overlay"></div>
 <?php wp_body_open(); ?>
- <!-- Search Wrapper Area Start -->
- <div class="search-wrapper section-padding-100">
-       
-    </div>
-    <!-- Search Wrapper Area End -->
-
-    <!-- ##### Main Content Wrapper Start ##### -->
-    <div class="main-content-wrapper d-flex clearfix">
-
-        <!-- Mobile Nav (max width 767px)-->
-        <div class="mobile-nav">
-            <!-- Navbar Brand -->
-            <div class="amado-navbar-brand">
-                <a href="<?php echo get_home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/logo.png" alt=""></a>
-            </div>
-            <!-- Navbar Toggler -->
-            <div class="amado-navbar-toggler">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-
-        <!-- Header Area Start -->
-        <header class="header-area clearfix" style="background-color: transparent!important">
-           
-            <nav class="amado-nav">
-                <div id="filters" class="button-group"> 
-						<button data-filter='*' class="btn-block border-0 pt-3 pb-3 active "><a href="http://localhost/shoes">Back To Buy List</a> </button>
-						
+    <div class="contact-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-0 col-md-2 col-lg-2 col-xl-2">
                 </div>
-            </nav>
-           
-        </header>
-        <!-- Header Area End -->
-
-        <div class="cart-table-area section-padding-100 features">
-            <div class="container-fluid">
-                <div class="row">
-                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-ambulance" aria-hidden="true" style="color: #a20a0a"></i></h2>
-                        <p>free shipping</p>
+                        <h2>
+                            <img src="<?php echo get_theme_mod( 'img_icon1' ); ?>" alt="" class="icon-contact">
+                        </h2>
+                        <p><?php echo get_theme_mod( 'option1' ); ?></p>
                     </div>
                 </div>
                 <!-- Newsletter Text -->
-                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-handshake-o" aria-hidden="true" style="color: #ffa36c"></i></h2>
-                        <p>fast transaction</p>
+                        <h2> <img src="<?php echo get_theme_mod( 'img_icon2' ); ?>" alt="" class="icon-contact"></h2>
+                        <p><?php echo get_theme_mod( 'option2' ); ?></p>
                     </div>
                 </div>
                 <!-- Newsletter Text -->
                
-                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-shopping-bag" aria-hidden="true" style="color: #799351"></i></h2>
-                        <p>best offer</p>
+                        <h2> <img src="<?php echo get_theme_mod( 'img_icon3' ); ?>" alt="" class="icon-contact"></h2>
+                        <p><?php echo get_theme_mod( 'option3' ); ?></p>
                     </div>
                 </div>
-                <div class="col-6 col-md-3 col-lg-3 col-xl-3">
+                <div class="col-6 col-md-2 col-lg-2 col-xl-2">
                     <div class="newsletter-text mb-100">
-                        <h2><i class="fa fa-tags" aria-hidden="true" style="color: #e79e4f"></i></h2>
-                        <p>Chúng tôi chỉ mua giày mới, còn nguyên tag.</p>
+                        <h2> <img src="<?php echo get_theme_mod( 'img_icon4' ); ?>" alt="" class="icon-contact"></h2>
+                        <p><?php echo get_theme_mod( 'option4' ); ?></p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-1">
+                    </div>
+                    <div class="col-10">
+                        <p class="contact-des-01">
+                            <?php echo get_theme_mod( 'contact-des-01' ); ?>
+                        </p>
+                        <p class="contact-des-02">
+                            <?php echo get_theme_mod( 'contact-des-02' ); ?>
+                        </p>
+                    </div>
+                    <div class="col-1">
+                    </div>
                 </div>
-
-                
-
             </div>
             <div class="container">
-            <div class="row">
-                    <div class="col-12 col-lg-10 col-md-10 col-xl-10 col-xs-12">
+                <div class="row">
+                    <div class="col-0 col-lg-2 col-md-2 col-xl-2 col-xs-2">
+                    </div>
+                    <div class="col-12 col-lg-8 col-md-8 col-xl-8 col-xs-8">
                         <div class="checkout_details_area mt-50 clearfix">
 
                             <div class="cart-title">
@@ -114,11 +111,19 @@
                             <?php the_content(); ?>
                         </div>
                     </div>
-                    
+                    <div class="col-0 col-lg-2 col-md-2 col-xl-2 col-xs-2">
+                    </div>
+                    <div class="col-12 col-lg-12 col-md-12 col-xl-12 col-xs-12 custom_form--btn--layout">
+                        <button class="custom_form--btn--on back-to-home">
+                          <a href="<?php echo get_home_url(); ?>"> <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>Back to Home</a> 
+                        </button>    
+                        <!-- <button class="custom_form--btn--on start">Start</button> -->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    
     <!-- ##### Main Content Wrapper End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
@@ -146,14 +151,14 @@
     <!-- Bootstrap js -->
     <script src="<?php echo get_stylesheet_directory_uri();?>/resources/js/bootstrap.min.js"></script>
     <!-- Plugins js -->
-    <script src="<?php echo get_stylesheet_directory_uri();?>/resources/js/plugins.js"></script>
     <!-- Active js -->
+    
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
     <script src="<?php echo get_stylesheet_directory_uri();?>/resources/js/active.js"></script>
 
     <script>
-        $( document ).ready(function() {
+        $(document).ready(function() {
 
             $('#filters').on( 'click','button', function() {
                 var filterValue = $(this).attr('data-filter');
@@ -164,8 +169,14 @@
                 
                  });
             });
-
-
+            //Custom Form 
+            $(".custom_form--btn--on.start").click(function(){
+                $(".contact-des-01").addClass('off');
+                $(".contact-des-02").addClass('off');
+                console.log("hihi");
+                $(".custom_form--btn--on.start").addClass('off');
+                
+            });
         });
 
 

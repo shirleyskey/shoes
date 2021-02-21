@@ -3,9 +3,7 @@ get_header();
 ?>
  <div class="products-catagories-area clearfix section-padding-100">
     <div class="container-fluid">
-    <div class="row">
-        <?php  _e("<h2 style='color:#000'>Kết quả tìm kiếm cho: ".get_query_var('s')."</h2>"); ?>
-    </div>
+    
     <div class="row">
             <?php
             $s=get_search_query();
@@ -53,9 +51,9 @@ get_header();
                                             </div>
                                             <!-- Ratings & Cart -->
                                             <div class="ratings-cart text-right">
-                                                <div class="cart">
+                                                <!-- <div class="cart">
                                                     <a href="<?php echo the_permalink();?>" data-toggle="tooltip" data-placement="left" title="Liên Hệ"><img src="<?php echo get_stylesheet_directory_uri();?>/resources/img/core-img/cart.png" alt=""></a>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                         

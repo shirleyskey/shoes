@@ -136,6 +136,507 @@ function shoes_widgets_init() {
 }
 add_action( 'widgets_init', 'shoes_widgets_init' );
 
+function customizer_a( $wp_customize ) {
+ 
+	// Tạo section
+$wp_customize->add_section (
+	'section_a',
+	array(
+		'title' => 'Tùy Biến Trang Liên Hệ',
+		'description' => 'Các tùy chọn cho Trang Liên Hệ',
+		'priority' => 25
+	)
+);
+
+// Tạo setting
+$wp_customize->add_setting (
+		'option1',
+		array(
+			'default' => 'Giá trị mặc định'
+		)
+	);
+	$wp_customize->add_setting (
+		'option2',
+		array(
+			'default' => 'Giá trị mặc định 2'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'option3',
+		array(
+			'default' => 'Giá trị mặc định 3'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'option4',
+		array(
+			'default' => 'Giá trị mặc định 4'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'contact-des-01',
+		array(
+			'default' => 'Descrition 01'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'contact-des-02',
+		array(
+			'default' => 'Descrition 02'
+		)
+	);
+
+
+
+	// Tạo coltrol
+	$wp_customize->add_control (
+		'control_option1',
+		array(
+			'label' => 'Option 1',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'option1'
+		)
+	);
+	$wp_customize->add_control (
+		'control_option2',
+		array(
+			'label' => 'Option 2',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'option2'
+		)
+	);
+	$wp_customize->add_control (
+		'control_option3',
+		array(
+			'label' => 'Option 3',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'option3'
+		)
+	);
+
+	$wp_customize->add_control (
+		'control_option4',
+		array(
+			'label' => 'Option 4',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'option4'
+		)
+	);
+
+	$wp_customize->add_control (
+		'control_contact-des-01',
+		array(
+			'label' => 'Option Description 01:',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'contact-des-01'
+		)
+	);
+
+	$wp_customize->add_control (
+		'control_contact-des-02',
+		array(
+			'label' => 'Option Description 02:',
+			'section' => 'section_a',
+			'type' => 'text',
+			'settings' => 'contact-des-02'
+		)
+	);
+
+	
+
+	/* Image Upload */
+	$wp_customize->add_setting( 'background' );
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'background',
+			array(
+				'label' => 'Custom Contact Background Image:',
+				'section' => 'section_a',
+				'settings' => 'background'
+			)
+		)
+	);
+
+
+	$wp_customize->add_setting( 'img_icon1' );
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'img_icon1',
+			array(
+				'label' => 'Image Icon 01 (576px/460px):',
+				'section' => 'section_a',
+				'settings' => 'img_icon1'
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'img_icon2' );
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'img_icon2',
+			array(
+				'label' => 'Image Icon 02 (576px/460px):',
+				'section' => 'section_a',
+				'settings' => 'img_icon2'
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'img_icon3' );
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'img_icon3',
+			array(
+				'label' => 'Image Icon 03 (576px/460px):',
+				'section' => 'section_a',
+				'settings' => 'img_icon3'
+			)
+		)
+	);
+
+	$wp_customize->add_setting( 'img_icon4' );
+	
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize,
+			'img_icon4',
+			array(
+				'label' => 'Image Icon 04 (576px/460px):',
+				'section' => 'section_a',
+				'settings' => 'img_icon4'
+			)
+		)
+	);
+
+
+
+
+}
+add_action( 'customize_register', 'customizer_a' );
+
+
+function customizer_b( $wp_customize ) {
+ 
+	// Tạo section
+$wp_customize->add_section (
+	'section_b',
+	array(
+		'title' => 'Tùy Biến Trang Chủ',
+		'description' => 'Các tùy chọn cho Trang Chủ',
+		'priority' => 25
+	)
+);
+
+// Tạo setting
+$wp_customize->add_setting( 'logo' );
+ 
+$wp_customize->add_control(
+    new WP_Customize_Image_Control(
+        $wp_customize,
+        'logo',
+        array(
+            'label' => 'Logo (200px/85px):',
+            'section' => 'section_b',
+            'settings' => 'logo'
+        )
+    )
+);
+	$wp_customize->add_setting (
+		'title',
+		array(
+			'default' => 'Title on Top-header'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'desciption01',
+		array(
+			'default' => 'Giá trị mặc định description01'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'desciption02',
+		array(
+			'default' => 'Giá trị mặc định description02'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'pinterest',
+		array(
+			'default' => 'Giá trị mặc định pinterest'
+		)
+	);
+
+
+	$wp_customize->add_setting (
+		'instagram',
+		array(
+			'default' => 'Giá trị mặc định instagram'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'facebook',
+		array(
+			'default' => 'Giá trị mặc định facebook'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'twitter',
+		array(
+			'default' => 'Giá trị mặc định twitter'
+		)
+	);
+
+	$wp_customize->add_setting(
+		'color_size',
+				array(
+					'default' => '#FAB832',
+				)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'color_size',
+			array(
+				'label' => 'Color Size:',
+				'section' => 'section_b',
+				'settings' => 'color_size',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'color_line',
+				array(
+					'default' => '#FAB832',
+				)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'color_line',
+			array(
+				'label' => 'Color line:',
+				'section' => 'section_b',
+				'settings' => 'color_line',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'color_name_item',
+				array(
+					'default' => '#000000',
+				)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'color_name_item',
+			array(
+				'label' => 'Color Name Item:',
+				'section' => 'section_b',
+				'settings' => 'color_name_item',
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
+		'color_header',
+				array(
+					'default' => '#000000',
+				)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'color_header',
+			array(
+				'label' => 'Color Header & Footer:',
+				'section' => 'section_b',
+				'settings' => 'color_header',
+			)
+		)
+	);
+
+
+
+	// Tạo coltrol
+	
+	$wp_customize->add_control (
+		'control_title',
+		array(
+			'label' => 'Title on Top Header:',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'title'
+		)
+	);
+	$wp_customize->add_control (
+		'control_description01',
+		array(
+			'label' => 'Footer Description 1:',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'desciption01'
+		)
+	);
+	
+	$wp_customize->add_control (
+		'control_description02',
+		array(
+			'label' => 'Footer Description 1:',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'desciption02'
+		)
+	);
+
+	$wp_customize->add_control (
+		'control_pinterest',
+		array(
+			'label' => 'Option Pinterest Link',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'pinterest'
+		)
+	);
+	$wp_customize->add_control (
+		'control_instagram',
+		array(
+			'label' => 'Option Instagram Link',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'instagram'
+		)
+	);
+	$wp_customize->add_control (
+		'control_facebook',
+		array(
+			'label' => 'Option Facebook Link',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'facebook'
+		)
+	);
+	
+	$wp_customize->add_control (
+		'control_twitter',
+		array(
+			'label' => 'Option Link Twitter',
+			'section' => 'section_b',
+			'type' => 'text',
+			'settings' => 'twitter'
+		)
+	);
+
+}
+add_action( 'customize_register', 'customizer_b' );
+
+function customizer_color( $wp_customize ) {
+ 
+	// Tạo section
+$wp_customize->add_section (
+	'section_color',
+	array(
+		'title' => 'Tùy Biến Màu',
+		'description' => 'Các tùy chọn cho Màu Sắc',
+		'priority' => 25
+	)
+);
+
+// Tạo setting
+$wp_customize->add_setting (
+		'text-color',
+		array(
+			'default' => 'text-color mặc định'
+		)
+	);
+	$wp_customize->add_setting (
+		'text-color01',
+		array(
+			'default' => 'Giá trị mặc định title'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'button-color',
+		array(
+			'default' => 'Giá trị mặc định description01'
+		)
+	);
+
+	$wp_customize->add_setting (
+		'background-color',
+		array(
+			'default' => 'Giá trị mặc định background color'
+		)
+	);
+
+	$wp_customize->add_control (
+		'control_background-color',
+		array(
+			'label' => 'Background-color',
+			'section' => 'section_color',
+			'type' => 'text',
+			'settings' => 'background-color'
+		)
+	);
+	$wp_customize->add_control (
+		'control_button-color',
+		array(
+			'label' => 'Button Color',
+			'section' => 'section_color',
+			'type' => 'text',
+			'settings' => 'button-color'
+		)
+	);
+	$wp_customize->add_control (
+		'control_text-color01',
+		array(
+			'label' => 'text color 01',
+			'section' => 'section_color',
+			'type' => 'text',
+			'settings' => 'text-color01'
+		)
+	);
+	
+	$wp_customize->add_control (
+		'control_text-color',
+		array(
+			'label' => 'Text color',
+			'section' => 'section_color',
+			'type' => 'text',
+			'settings' => 'text-color'
+		)
+	);
+
+}
+add_action( 'customize_register', 'customizer_color' );
+
+
+
 /**
  * Enqueue scripts and styles.
  */
@@ -154,31 +655,22 @@ add_action( 'wp_enqueue_scripts', 'shoes_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+
 
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Functions which enhance the theme by hooking into WordPress.
  */
-require get_template_directory() . '/inc/template-functions.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
-
-
 
 
